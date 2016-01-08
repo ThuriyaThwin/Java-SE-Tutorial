@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.diceGame.GamePlayGround">
+   <children>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="300.0">
+               <children>
+                  <HBox alignment="CENTER" style="-fx-background-color: silver;">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SYSTEM">
+                           <font>
+                              <Font name="Hannotate SC Regular" size="27.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <padding>
+                        <Insets bottom="20.0" top="50.0" />
+                     </padding>
+                     <children>
+                        <ImageView fx:id="sysDice1" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+      	               <image>
+      	                  <Image url="@6.png" />
+      	               </image>
+                        </ImageView>
+                        <ImageView fx:id="sysDice2" fitHeight="80.0" fitWidth="80.0" layoutX="120.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@6.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Text fx:id="systemAmount" strokeType="OUTSIDE" strokeWidth="0.0" text="5000">
+                           <font>
+                              <Font size="33.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: silver;">
+               <children>
+                  <HBox alignment="CENTER" style="-fx-background-color: white;">
+                     <children>
+                        <Text fx:id="userName" strokeType="OUTSIDE" strokeWidth="0.0" text="USER NAME">
+                           <font>
+                              <Font name="Hannotate SC Regular" size="27.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <padding>
+                        <Insets bottom="20.0" top="50.0" />
+                     </padding>
+                     <children>
+                        <ImageView fx:id="userDice1" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@6.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="userDice2" fitHeight="80.0" fitWidth="80.0" layoutX="120.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@6.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Text fx:id="userAmount" strokeType="OUTSIDE" strokeWidth="0.0" text="5000">
+                           <font>
+                              <Font size="33.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Slider fx:id="slider" prefHeight="16.0" prefWidth="188.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label fx:id="voteMoney" text="0" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Button fx:id="start" mnemonicParsing="false" style="-fx-background-color: black;" text="START" textFill="#fcf9f9" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</StackPane>

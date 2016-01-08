@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="main-frame" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.cinema.manager.DailyReportController">
+   <children>
+      <HBox styleClass="title-box">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Daily Report" />
+         </children>
+      </HBox>
+      <HBox styleClass="form-group">
+         <children>
+            <DatePicker fx:id="date" promptText="Show Date" />
+            <ComboBox fx:id="cinemas" prefHeight="26.0" prefWidth="210.0" promptText="CINEMA" />
+            <ComboBox fx:id="movies" prefHeight="26.0" prefWidth="214.0" promptText="Films" />
+            <Button mnemonicParsing="false" onAction="#clear" text="CLEAR" />
+         </children>
+      </HBox>
+      <TableView fx:id="table" prefHeight="566.0" prefWidth="1020.0">
+        <columns>
+          <TableColumn fx:id="colCinema" prefWidth="180.0" text="Cinema" />
+          <TableColumn fx:id="colMovie" prefWidth="208.0" text="Movie" />
+            <TableColumn fx:id="colShowTime" prefWidth="135.0" text="Show Time" />
+            <TableColumn fx:id="colSeatType" prefWidth="122.0" text="Seat Type" />
+            <TableColumn fx:id="colTotalSeat" prefWidth="108.0" text="Total Ticket" />
+            <TableColumn fx:id="colSoldOut" prefWidth="124.0" text="Sold Out" />
+            <TableColumn fx:id="colTotal" prefWidth="140.0" text="Total" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>

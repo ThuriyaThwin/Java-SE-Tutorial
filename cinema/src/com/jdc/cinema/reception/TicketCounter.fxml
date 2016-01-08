@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="main-frame" stylesheets="@ticke.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.cinema.reception.TicketCounter">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="header" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Cinema Management System" />
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox styleClass="sub-header">
+               <children>
+                  <Label styleClass="sub-title" text="Select Show Time" />
+               </children>
+            </HBox>
+            <VBox styleClass="space-5">
+               <children>
+                  <Label text="Film" />
+                  <ComboBox fx:id="inMovies" prefHeight="26.0" prefWidth="262.0" />
+               </children>
+            </VBox>
+            <VBox layoutX="30.0" layoutY="30.0" styleClass="space-5">
+               <children>
+                  <Label text="Cinema" />
+                  <ComboBox fx:id="inCinemas" prefHeight="26.0" prefWidth="262.0" />
+               </children>
+            </VBox>
+            <VBox layoutX="30.0" layoutY="97.0" styleClass="space-5">
+               <children>
+                  <Label text="Show Date" />
+                  <ComboBox fx:id="inShowDates" prefHeight="26.0" prefWidth="262.0" />
+               </children>
+            </VBox>
+            <VBox layoutX="30.0" layoutY="164.0" styleClass="space-5">
+               <children>
+                  <Label text="Show Time" />
+                  <ComboBox fx:id="inShowTimes" prefHeight="26.0" prefWidth="262.0" />
+               </children>
+            </VBox>
+         </children>
+         <styleClass>
+            <String fx:value="left-panel" />
+            <String fx:value="space-20" />
+         </styleClass></VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox styleClass="sub-header">
+               <children>
+                  <Label styleClass="sub-title" text="Select Seats" />
+               </children>
+            </HBox>
+            <StackPane fx:id="seatSelect" prefHeight="464.0" prefWidth="640.0" />
+         </children>
+         <styleClass>
+            <String fx:value="content-panel" />
+            <String fx:value="space-20" />
+         </styleClass></VBox>
+   </center>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox styleClass="sub-header">
+               <children>
+                  <Label styleClass="sub-title" text="Order Details" />
+               </children>
+            </HBox>
+            <GridPane hgap="10.0" prefHeight="139.0" prefWidth="260.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="88.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="172.0" minWidth="10.0" prefWidth="172.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Film" />
+                  <Label text="Cinema" GridPane.rowIndex="1" />
+                  <Label text="Date" GridPane.rowIndex="2" />
+                  <Label text="Show Time" GridPane.rowIndex="3" />
+                  <Label fx:id="outMovie" prefHeight="16.0" prefWidth="166.0" text="Label" wrapText="true" GridPane.columnIndex="1" />
+                  <Label fx:id="outCinema" prefHeight="16.0" prefWidth="170.0" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="outShowDate" prefHeight="16.0" prefWidth="168.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="outShowTime" prefHeight="16.0" prefWidth="169.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="colFloor" prefWidth="105.0" text="Floor" />
+                <TableColumn fx:id="colSeat" prefWidth="75.0" text="Seat" />
+                  <TableColumn fx:id="colPrice" prefWidth="97.0" text="Price" />
+              </columns>
+            </TableView>
+            <GridPane hgap="10.0" layoutX="30.0" layoutY="110.0" prefHeight="72.0" prefWidth="260.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="88.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="172.0" minWidth="10.0" prefWidth="172.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Total" />
+                  <Label fx:id="outTotal" prefHeight="16.0" prefWidth="166.0" text="Label" wrapText="true" GridPane.columnIndex="1" />
+                  <HBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#clear" text="CLEAR" />
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#paid" prefHeight="26.0" prefWidth="58.0" text="PAID" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="btn-group" />
+                        <String fx:value="space-5" />
+                     </styleClass>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+         <styleClass>
+            <String fx:value="right-panel" />
+            <String fx:value="space-20" />
+         </styleClass></VBox>
+   </right>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="message-panel" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="outMessage" text="Label" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

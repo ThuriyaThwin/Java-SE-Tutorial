@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="main-frame" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.cinema.manager.ShowTimeController">
+   <children>
+      <HBox styleClass="title-box">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Show Time Management" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="content-box">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="left-content">
+               <children>
+                  <TableView fx:id="showTimeTable" prefHeight="611.0" prefWidth="630.0">
+                    <columns>
+                      <TableColumn fx:id="colId" text="ID" />
+                      <TableColumn fx:id="colName" prefWidth="231.0" text="Show Time" />
+                        <TableColumn fx:id="colTimeFrom" prefWidth="161.0" text="Time From" />
+                        <TableColumn fx:id="colTimeTo" prefWidth="155.0" text="Time To" />
+                    </columns>
+                  </TableView>
+               </children></VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <styleClass>
+                  <String fx:value="right-content" />
+                  <String fx:value="cinema-form" />
+               </styleClass>
+               <children>
+                  <Label text="Add New Show Time">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="219.0" fitWidth="349.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Cinema.jpg" />
+                     </image>
+                  </ImageView>
+                  <VBox styleClass="form-group">
+                     <children>
+                        <Label text="Time From" />
+                        <HBox styleClass="form-group">
+                           <children>
+                              <ComboBox fx:id="selHourFrom" prefHeight="26.0" prefWidth="121.0" promptText="Hours" />
+                              <ComboBox fx:id="selMinFrom" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="121.0" promptText="Minuts" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="30.0" layoutY="10.0" styleClass="form-group">
+                     <children>
+                        <Label text="Time To" />
+                        <HBox styleClass="form-group">
+                           <children>
+                              <ComboBox fx:id="selHourTo" prefHeight="26.0" prefWidth="121.0" promptText="Hours" />
+                              <ComboBox fx:id="selMinTo" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="121.0" promptText="Minuts" />
+                              <Button mnemonicParsing="false" onAction="#add" prefHeight="26.0" prefWidth="85.0" text="ADD" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

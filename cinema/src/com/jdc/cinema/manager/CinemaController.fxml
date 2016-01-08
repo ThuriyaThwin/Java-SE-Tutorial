@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="main-frame" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.cinema.manager.CinemaController">
+   <children>
+      <HBox styleClass="title-box">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Cinema Management" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="content-box">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="left-content">
+               <children>
+                  <TableView fx:id="cinemaTable" prefHeight="615.0" prefWidth="630.0">
+                    <columns>
+                      <TableColumn fx:id="colCinemaName" prefWidth="152.0" text="Cinema" />
+                      <TableColumn fx:id="colFloor" prefWidth="158.0" text="Floor" />
+                        <TableColumn fx:id="colSeatType" prefWidth="168.0" text="Seat Type" />
+                        <TableColumn fx:id="colRowsCount" prefWidth="149.0" text="Row Counts" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <VBox styleClass="form-group">
+                     <children>
+                        <Label text="Cinema Name" />
+                        <TextField fx:id="cinemaName" promptText="Enter Cinema's Name" />
+                     </children>
+                  </VBox>
+                  <HBox styleClass="form-group">
+                     <children>
+                        <Label text="Seats Per Row" />
+                        <Slider fx:id="seatPerRowSlider" majorTickUnit="5.0" max="20.0" minorTickCount="4" prefHeight="16.0" prefWidth="246.0" showTickLabels="true" showTickMarks="true" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" styleClass="form-group">
+                     <children>
+                        <ToggleButton fx:id="isSingleFloorButton" mnemonicParsing="false" selected="true" text="Single">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="floorGroup" />
+                           </toggleGroup>
+                        </ToggleButton>
+                        <ToggleButton mnemonicParsing="false" text="Double" toggleGroup="$floorGroup" />
+                        <Button mnemonicParsing="false" onAction="#generate" text="Generate" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="floorTable" prefHeight="341.0" prefWidth="350.0">
+                    <columns>
+                      <TableColumn fx:id="colTmpFloor" prefWidth="112.0" text="Floor" />
+                      <TableColumn fx:id="colTmpSeatType" prefWidth="122.0" text="Seat Type" />
+                        <TableColumn fx:id="colTmpRowsCount" prefWidth="113.0" text="Row Counts" />
+                    </columns>
+                  </TableView>
+                  <HBox styleClass="form-group">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#clear" text="CLEAR" />
+                        <Button mnemonicParsing="false" onAction="#addCinema" text="CREATE CINEMA" />
+                     </children>
+                  </HBox>
+               </children>
+               <styleClass>
+                  <String fx:value="right-content" />
+                  <String fx:value="cinema-form" />
+               </styleClass>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

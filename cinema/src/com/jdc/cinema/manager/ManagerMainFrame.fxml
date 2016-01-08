@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.cinema.manager.ManagerMainFrame">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+          <Menu fx:id="reports" mnemonicParsing="false" text="Reports">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Daily Report" />
+                  <MenuItem mnemonicParsing="false" text="Monthly Report" />
+            </items>
+          </Menu>
+            <Menu fx:id="edit" mnemonicParsing="false" text="Movies">
+              <items>
+                  <MenuItem mnemonicParsing="false" text="Add Movie" />
+                  <MenuItem mnemonicParsing="false" text="Movie Show Time" />
+              </items>
+            </Menu>
+          <Menu fx:id="metadata" mnemonicParsing="false" text="Metadata">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Types" />
+                  <MenuItem mnemonicParsing="false" text="Prices" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Cinema" />
+                  <MenuItem mnemonicParsing="false" text="Show Time" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                <MenuItem mnemonicParsing="false" text="Users" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <HBox prefHeight="50.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <VBox prefWidth="240.0" styleClass="left-toolbox" stylesheets="@application.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="DailyReport" mnemonicParsing="false" onAction="#clickButton" prefHeight="97.0" prefWidth="200.0" styleClass="tools-button" text="Daily Report">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="27.07" offsetX="3.0" offsetY="3.0" radius="15.3125" spread="0.08" width="36.18" />
+               </effect>
+            </Button>
+            <Button id="MonthlyReport" mnemonicParsing="false" onAction="#clickButton" prefHeight="97.0" prefWidth="200.0" styleClass="tools-button" text="Monthly Report">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="27.07" offsetX="3.0" offsetY="3.0" radius="15.3125" spread="0.08" width="36.18" />
+               </effect>
+            </Button>
+            <Button id="AddMovie" layoutX="30.0" layoutY="147.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="97.0" prefWidth="200.0" styleClass="tools-button" text="Movie Management" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="27.07" offsetX="3.0" offsetY="3.0" radius="15.3125" spread="0.08" width="36.18" />
+               </effect>
+            </Button>
+            <Button id="MovieShowTime" layoutX="30.0" layoutY="264.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="97.0" prefWidth="200.0" styleClass="tools-button" text="Cinema Show Time" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="27.07" offsetX="3.0" offsetY="3.0" radius="15.3125" spread="0.08" width="36.18" />
+               </effect>
+            </Button>
+            <Button id="Users" layoutX="30.0" layoutY="381.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="97.0" prefWidth="200.0" styleClass="tools-button" text="Users Management" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="27.07" offsetX="3.0" offsetY="3.0" radius="15.3125" spread="0.08" width="36.18" />
+               </effect>
+            </Button>
+         </children></VBox>
+   </left>
+   <center>
+      <StackPane fx:id="stack" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

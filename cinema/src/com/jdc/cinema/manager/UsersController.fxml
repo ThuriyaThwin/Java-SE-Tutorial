@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="main-frame" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.cinema.manager.UserController">
+   <children>
+      <HBox styleClass="title-box">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="User Admin" />
+         </children>
+      </HBox>
+      <HBox styleClass="content-box">
+         <children>
+            <VBox spacing="20.0" styleClass="left-content">
+               <children>
+                  <HBox spacing="10.0">
+                     <children>
+                        <ComboBox fx:id="schRoles" prefHeight="26.0" prefWidth="178.0" promptText="Select Role" />
+                        <TextField fx:id="schName" prefHeight="26.0" prefWidth="241.0" promptText="User Name" />
+                        <Button mnemonicParsing="false" onAction="#clearSearch" text="CLEAR" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="userTable" styleClass="user-table">
+                    <columns>
+                      <TableColumn fx:id="colName" prefWidth="179.0" text="User Name" />
+                      <TableColumn fx:id="colLogin" prefWidth="230.0" text="Login ID" />
+                        <TableColumn fx:id="colRole" prefWidth="219.0" text="Role" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <VBox styleClass="form-group">
+                     <children>
+                        <Label text="User Name" />
+                        <TextField fx:id="txtName" promptText="Enter User Name" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="30.0" layoutY="76.0" styleClass="form-group">
+                     <children>
+                        <Label text="Login ID" />
+                        <TextField fx:id="txtLogin" promptText="Enter Login ID" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="30.0" layoutY="143.0" styleClass="form-group">
+                     <children>
+                        <Label text="Password" />
+                        <PasswordField fx:id="txtPassword" promptText="Enter Password" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="30.0" layoutY="210.0" styleClass="form-group">
+                     <children>
+                        <Label text="Role" />
+                        <ComboBox fx:id="txtRoles" prefHeight="26.0" prefWidth="267.0" promptText="Select One Role" />
+                     </children>
+                  </VBox>
+                  <HBox styleClass="form-group">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#clear" text="CLEAR" />
+                        <Button mnemonicParsing="false" onAction="#addUser" text="ADD NEW USER" />
+                     </children>
+                  </HBox>
+               </children>
+               <styleClass>
+                  <String fx:value="right-content" />
+                  <String fx:value="form" />
+               </styleClass>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

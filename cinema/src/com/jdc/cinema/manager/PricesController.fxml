@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="main-frame" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.cinema.manager.PriceController">
+   <children>
+      <HBox styleClass="title-box">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Price Management" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="content-box">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="left-content">
+               <children>
+                  <HBox styleClass="form-group">
+                     <children>
+                        <ComboBox fx:id="schMovieTypes" prefHeight="26.0" prefWidth="198.0" promptText="Movie Type" />
+                        <ComboBox fx:id="schSeatTypes" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="198.0" promptText="Seat Type" />
+                        <Button mnemonicParsing="false" onAction="#clearSearch" text="CLEAR" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="priceTable" prefHeight="582.0" prefWidth="630.0">
+                    <columns>
+                      <TableColumn fx:id="colMovie" prefWidth="193.0" text="Movie Type" />
+                      <TableColumn fx:id="colSeat" prefWidth="219.0" text="Seat Type" />
+                        <TableColumn fx:id="colPrice" prefWidth="216.0" text="Price" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <styleClass>
+                  <String fx:value="right-content" />
+                  <String fx:value="form" />
+               </styleClass>
+               <children>
+                  <VBox styleClass="form-group">
+                     <children>
+                        <Label text="Movie Type" />
+                        <ComboBox fx:id="inMovieTypes" prefHeight="26.0" prefWidth="218.0" promptText="Select Movie Type" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="30.0" layoutY="56.0" styleClass="form-group">
+                     <children>
+                        <Label text="Seat Type" />
+                        <ComboBox fx:id="inSeatTypes" prefHeight="26.0" prefWidth="218.0" promptText="Select Seat Type" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="30.0" layoutY="128.0" styleClass="form-group">
+                     <children>
+                        <Label text="Price" />
+                        <TextField fx:id="inPrice" />
+                     </children>
+                  </VBox>
+                  <HBox styleClass="form-group">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#clear" text="CLEAR" />
+                        <Button mnemonicParsing="false" onAction="#addPrice" text="ADD PRICE" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

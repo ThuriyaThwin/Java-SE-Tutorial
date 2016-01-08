@@ -1,0 +1,69 @@
+.main-frame {
+	-fx-pref-width: 1040;
+	-fx-pref-height: 701; 
+	-fx-padding: 10;
+	-fx-spacing: 20;
+}
+
+.title-box {
+	-fx-padding: 10;
+	-fx-alignment: center-left;
+	-fx-background-color: rgb(64,0,128);
+}
+
+.title {
+	-fx-fill: rgb(0,255,255);
+	-fx-font-size: 20px;
+	-fx-font-family: ChalkDuster;
+	-fx-font-weight: bold;
+}
+
+.sub-title {
+	-fx-font-size: 16;
+	-fx-font-weight: bold;	
+}
+
+.content-box {
+	-fx-pref-height: 655;
+}
+
+.left-content {
+	-fx-pref-width: 640;
+	-fx-spacing: 10;	
+}
+
+.type-table-box {
+	-fx-pref-width: 310;
+	-fx-spacing: 20;
+}
+
+.right-content {
+	-fx-pref-width: 400;	
+}
+
+.user-table {
+	-fx-pref-height: 580;
+}
+
+.form {
+	-fx-spacing: 20;
+	-fx-padding: 46 20 20 20;
+}
+
+.cinema-form {
+	-fx-spacing: 20;
+	-fx-padding: 0 20 20 20;
+}
+
+.form-group {
+	-fx-spacing: 10;
+}
+
+.left-toolbox {
+	-fx-padding: 30 20 20 20;
+	-fx-spacing: 20;
+}
+
+.tools-button {
+	-fx-background-color: rgb(102,204,255);
+}

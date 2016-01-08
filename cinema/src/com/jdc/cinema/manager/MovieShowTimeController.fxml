@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="main-frame" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.cinema.manager.MovieShowTimeController">
+   <children>
+      <HBox styleClass="title-box">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Movie Show Time Management" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="content-box">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="left-content">
+               <children>
+                  <HBox styleClass="form-group">
+                     <children>
+                        <ComboBox fx:id="schCinema" prefWidth="150.0" promptText="Cinema" />
+                        <DatePicker fx:id="schDate" promptText="Show Date" />
+                        <Button mnemonicParsing="false" onAction="#clearSearch" text="CLEAR" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="table" prefHeight="580.0" prefWidth="630.0">
+                    <columns>
+                      <TableColumn fx:id="colMovie" prefWidth="197.0" text="Movie" />
+                      <TableColumn fx:id="colCinema" prefWidth="134.0" text="Cinema" />
+                        <TableColumn fx:id="colShowDate" prefWidth="152.0" text="ShowDate" />
+                        <TableColumn fx:id="colShowTime" prefWidth="144.0" text="Show Time" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <styleClass>
+                  <String fx:value="right-content" />
+                  <String fx:value="form" />
+               </styleClass>
+               <children>
+                  <VBox styleClass="form-group">
+                     <children>
+                        <Label text="Movie" />
+                        <TextField fx:id="mvName" promptText="Movie Name" />
+                        <ListView fx:id="inMovies" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <VBox styleClass="form-group">
+                     <children>
+                        <Label text="Cinema" />
+                        <ComboBox fx:id="inCinema" prefHeight="26.0" prefWidth="241.0" promptText="Cinema Name" />
+                     </children>
+                  </VBox>
+                  <VBox styleClass="form-group">
+                     <children>
+                        <Label text="Show Date" />
+                        <HBox styleClass="form-group">
+                           <children>
+                              <DatePicker fx:id="inStartDate" prefHeight="26.0" prefWidth="170.0" promptText="Date From" />
+                              <DatePicker fx:id="inEndDate" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="170.0" promptText="Date From" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox styleClass="form-group">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#clear" prefHeight="26.0" prefWidth="115.0" text="CLEAR" />
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#save" prefHeight="26.0" prefWidth="115.0" text="SAVE" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

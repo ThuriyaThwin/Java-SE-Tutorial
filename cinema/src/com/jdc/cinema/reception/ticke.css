@@ -1,0 +1,91 @@
+.main-frame {
+	-fx-pref-width: 1280;
+	-fx-pref-height: 740; 
+	-fx-padding: 10;
+	-fx-spacing: 20;	
+}
+
+.header {
+	-fx-pref-height: 80;
+	-fx-alignment: center;
+	-fx-background-color: rgb(51,51,51);
+}
+
+.title {
+	-fx-font-size: 20;
+	-fx-fill: rgb(255,255,0);
+	-fx-font-weight: bold;
+}
+
+.left-panel, .right-panel {
+	-fx-padding: 10;
+	-fx-pref-width: 300;
+}
+
+.content-panel {
+	-fx-padding: 10;
+	
+}
+
+
+.message-panel {
+	-fx-pref-height: 60;
+	-fx-alignment: center-left;
+	-fx-padding: 20;
+	-fx-background-color: rgb(204,204,204);
+}
+
+.sub-header {
+	-fx-pref-height: 60;
+	-fx-background-color: rgb(179,179,179);
+	-fx-alignment: center ;	
+}
+
+.sub-title {
+	-fx-font-size: 16;
+	-fx-text-fill: rgb(0,0,128);
+	-fx-font-weight: bold;
+}
+
+.btn-group {
+	-fx-alignment: center-left ;
+}
+
+.space-5 {
+	-fx-spacing: 5;	
+}
+
+.space-10 {
+	-fx-spacing: 10;
+}
+
+.space-20 {
+	-fx-spacing: 20;
+}
+
+.floor-view {
+	-fx-padding: 20;
+	-fx-pref-width: 100%;
+	-fx-alignment: top-center ;
+}
+
+.seat-view {
+	-fx-pref-width: 80;
+}
+
+.btn-ticket-sell {
+	-fx-background-color: rgb(102,102,255);
+	-fx-text-fill: rgb(102,255,255);
+}
+
+.Theater {
+	-fx-background-color: rgb(102,255,204);
+}
+
+.Lodge {
+	-fx-background-color: rgb(204,255,102);
+}
+
+.PairBox {
+	-fx-background-color: rgb(255,204,102);
+}

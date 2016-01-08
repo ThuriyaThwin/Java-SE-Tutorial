@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="main-frame" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.cinema.manager.TypesController">
+   <children>
+      <HBox styleClass="title-box">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Types Management" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="content-box">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" styleClass="left-content">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="type-table-box">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub-title" text="Seat Types" />
+                        <TableView fx:id="seatTypes" prefHeight="576.0" prefWidth="310.0">
+                          <columns>
+                            <TableColumn fx:id="colSeatId" prefWidth="54.0" text="Id" />
+                            <TableColumn fx:id="colSeatName" prefWidth="254.0" text="Seat Type Name" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="type-table-box">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub-title" text="Movie Types" />
+                        <TableView fx:id="movieTypes" prefHeight="577.0" prefWidth="310.0">
+                          <columns>
+                            <TableColumn fx:id="colMovieId" prefWidth="60.0" text="Id" />
+                            <TableColumn fx:id="colMovieName" prefWidth="247.0" text="Movie Type Name" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <styleClass>
+                  <String fx:value="right-content" />
+                  <String fx:value="form" />
+               </styleClass>
+               <children>
+                  <VBox styleClass="form-group">
+                     <children>
+                        <Label text="Type" />
+                        <ComboBox fx:id="types" prefHeight="26.0" prefWidth="215.0" promptText="Select Type" />
+                     </children>
+                  </VBox>
+                  <VBox styleClass="form-group">
+                     <children>
+                        <Label text="Type Name" />
+                        <TextField fx:id="name" promptText="Enter Name" />
+                     </children>
+                  </VBox>
+                  <HBox styleClass="form-group">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#clear" text="CLEAR" />
+                        <Button mnemonicParsing="false" onAction="#add" text="ADD TYPE" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="main-frame" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.cinema.manager.AddMovieController">
+   <children>
+      <HBox styleClass="title-box">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Movie Management" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="content-box">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="left-content">
+               <children>
+                  <HBox styleClass="form-group">
+                     <children>
+                        <ComboBox fx:id="schTypes" prefHeight="26.0" prefWidth="175.0" promptText="Movie Type" />
+                        <TextField fx:id="schName" prefHeight="26.0" prefWidth="267.0" promptText="Movie Name" />
+                        <Button mnemonicParsing="false" onAction="#clearSearch" prefHeight="26.0" prefWidth="92.0" text="CLEAR" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="table" prefHeight="578.0" prefWidth="630.0">
+                    <columns>
+                      <TableColumn fx:id="colName" prefWidth="209.0" text="Name" />
+                      <TableColumn fx:id="colType" prefWidth="142.0" text="Type" />
+                        <TableColumn fx:id="colActors" prefWidth="277.0" text="Actors" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <styleClass>
+                  <String fx:value="right-content" />
+                  <String fx:value="form" />
+               </styleClass>
+               <children>
+                  <VBox styleClass="form-group">
+                     <children>
+                        <Label text="Movie Type" />
+                        <ComboBox fx:id="inTypes" prefHeight="26.0" prefWidth="268.0" promptText="Select Type" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="30.0" layoutY="56.0" styleClass="form-group">
+                     <children>
+                        <Label text="Name" />
+                        <TextField fx:id="inName" promptText="Enter Movie Name" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="30.0" layoutY="128.0" styleClass="form-group">
+                     <children>
+                        <Label text="Actors" />
+                        <TextField fx:id="inActors" promptText="Enter Actors" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="30.0" layoutY="200.0" styleClass="form-group">
+                     <children>
+                        <Label text="Director" />
+                        <TextField fx:id="inDirector" promptText="Enter Director" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="30.0" layoutY="272.0" styleClass="form-group">
+                     <children>
+                        <Label text="Description" />
+                        <TextArea fx:id="inDescription" prefHeight="119.0" prefWidth="350.0" promptText="Enter Short Description" wrapText="true" />
+                     </children>
+                  </VBox>
+                  <HBox styleClass="form-group">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#clear" prefHeight="26.0" prefWidth="114.0" text="CLEAR" />
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#save" prefHeight="26.0" prefWidth="114.0" text="SAVE" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
