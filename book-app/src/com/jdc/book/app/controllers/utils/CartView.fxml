@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="200.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.book.app.controllers.utils.CartView">
+   <children>
+      <HBox>
+         <children>
+            <Label text="In the Cart" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="279.0">
+               <children>
+                  <Label fx:id="totalHead" text="0" />
+               </children>
+            </HBox>
+         </children>
+         <styleClass>
+            <String fx:value="card-title" />
+            <String fx:value="color-900" />
+         </styleClass>
+      </HBox>
+      <VBox prefHeight="436.0" prefWidth="414.0">
+         <styleClass>
+            <String fx:value="card-body" />
+            <String fx:value="color-200" />
+         </styleClass>
+         <children>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="364.0" prefWidth="380.0">
+               <content>
+                  <VBox fx:id="items" prefWidth="380.0" spacing="5.0" />
+               </content>
+            </ScrollPane>
+            <HBox styleClass="fs-16">
+               <children>
+                  <Label text="Total" />
+                  <HBox alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="339.0">
+                     <children>
+                        <Label fx:id="totalFoot" text="0" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox fx:id="controls" alignment="CENTER">
+         <styleClass>
+            <String fx:value="card-title" />
+            <String fx:value="color-500" />
+            <String fx:value="form-group" />
+         </styleClass>
+      </HBox>
+   </children>
+   <styleClass>
+      <String fx:value="wid-small" />
+      <String fx:value="card-shadow" />
+   </styleClass>
+</VBox>

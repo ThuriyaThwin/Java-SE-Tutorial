@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="content-view" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.book.app.controllers.AddBook">
+   <stylesheets>
+      <URL value="@colors.css" />
+      <URL value="@application.css" />
+   </stylesheets>
+   <children>
+      <HBox>
+         <children>
+            <Label text="Add Book" />
+         </children>
+         <styleClass>
+            <String fx:value="title-view" />
+            <String fx:value="color-500" />
+            <String fx:value="card-shadow" />
+         </styleClass>
+      </HBox>
+      <GridPane hgap="20.0" vgap="5.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Category *" GridPane.rowIndex="1" />
+            <Label text="Book Name *" GridPane.rowIndex="2" />
+            <Label text="Price *" GridPane.rowIndex="3" />
+            <Label text="Issue Date" GridPane.rowIndex="4" />
+            <Label text="Short Description" GridPane.rowIndex="5" />
+            <Label text="Author *" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="Photo" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label text="Biography" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <TextField fx:id="category" prefHeight="26.0" prefWidth="251.0" promptText="Enter Category" />
+                  <Button mnemonicParsing="false" onAction="#searchCategory" styleClass="color-100" text="Search" />
+               </children>
+            </HBox>
+            <TextField fx:id="name" promptText="Enter Book Name" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="price" promptText="Enter Book Price" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <DatePicker fx:id="issueDate" promptText="Enter Date" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextArea fx:id="description" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.rowSpan="3" />
+            <HBox alignment="CENTER_LEFT" layoutX="230.0" layoutY="60.0" spacing="10.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <children>
+                  <TextField fx:id="authorName" prefHeight="26.0" prefWidth="248.0" promptText="Enter Author Name" />
+                  <Button mnemonicParsing="false" onAction="#searchAuthor" styleClass="color-100" text="Search" />
+               </children>
+            </HBox>
+            <ImageView fx:id="photo" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="3">
+               <image>
+                  <Image url="@../../../../../../image/no-profile-img.gif" />
+               </image>
+            </ImageView>
+            <TextArea fx:id="biography" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="5" GridPane.rowSpan="3" />
+            <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="3" GridPane.rowIndex="8">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#clear" styleClass="color-100" text="CLEAR" />
+                  <Button fx:id="upload" layoutX="10.0" layoutY="22.0" mnemonicParsing="false" onAction="#uploadPhoto" styleClass="color-300" text="Photo Upload" />
+                  <Button mnemonicParsing="false" onAction="#save" styleClass="color-800" text="SAVE" />
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

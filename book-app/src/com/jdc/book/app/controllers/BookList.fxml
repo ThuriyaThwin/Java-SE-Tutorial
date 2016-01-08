@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="content-view" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.book.app.controllers.BookList">
+   <stylesheets>
+      <URL value="@colors.css" />
+      <URL value="@application.css" />
+   </stylesheets>
+   <children>
+      <HBox>
+         <children>
+            <Label text="Book List" />
+         </children>
+         <styleClass>
+            <String fx:value="title-view" />
+            <String fx:value="color-500" />
+            <String fx:value="card-shadow" />
+         </styleClass>
+      </HBox>
+      <HBox fx:id="cartContainer" prefHeight="100.0" prefWidth="200.0" styleClass="content-view">
+         <stylesheets>
+            <URL value="@application.css" />
+            <URL value="@colors.css" />
+         </stylesheets>
+         <children>
+            <VBox prefHeight="479.0" prefWidth="100.0" styleClass="wid-mid">
+               <children>
+                  <VBox prefHeight="547.0" prefWidth="640.0" styleClass="card-body">
+                     <children>
+                        <HBox styleClass="form-group">
+                           <children>
+                              <ComboBox fx:id="categories" prefHeight="26.0" prefWidth="161.0" promptText="Category" />
+                              <ComboBox fx:id="authors" prefHeight="26.0" prefWidth="171.0" promptText="Author" />
+                              <TextField fx:id="name" prefHeight="26.0" prefWidth="208.0" promptText="Book Name" />
+                              <Button mnemonicParsing="false" onAction="#clear" text="Clear" />
+                           </children>
+                        </HBox>
+                        <TableView fx:id="books" prefHeight="378.0" prefWidth="610.0" tableMenuButtonVisible="true">
+                          <columns>
+                            <TableColumn fx:id="colCategory" prefWidth="131.0" text="Category" />
+                            <TableColumn fx:id="colAuthor" prefWidth="162.0" text="Author" />
+                              <TableColumn fx:id="colBook" prefWidth="184.0" text="Book Name" />
+                              <TableColumn fx:id="colPrice" prefWidth="129.0" text="Price" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

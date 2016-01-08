@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="content-view" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.book.app.controllers.Authors">
+   <stylesheets>
+      <URL value="@colors.css" />
+      <URL value="@application.css" />
+   </stylesheets>
+   <children>
+      <HBox>
+         <children>
+            <Label text="Authors" />
+         </children>
+         <styleClass>
+            <String fx:value="title-view" />
+            <String fx:value="color-700" />
+            <String fx:value="card-shadow" />
+         </styleClass>
+      </HBox>
+      <HBox styleClass="card">
+         <children>
+            <VBox styleClass="left-view">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="Add Author" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="card-title" />
+                        <String fx:value="color-300" />
+                     </styleClass>
+                  </HBox>
+                  <VBox>
+                     <styleClass>
+                        <String fx:value="card-body" />
+                        <String fx:value="color-100" />
+                     </styleClass>
+                     <children>
+                        <VBox styleClass="form-group">
+                           <children>
+                              <Label text="Profile Image" />
+                              <ImageView fx:id="photo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../image/no-profile-img.gif" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <VBox styleClass="form-group">
+                           <children>
+                              <Label text="Author Name" />
+                              <TextField fx:id="name" promptText="Enter Name" />
+                           </children>
+                        </VBox>
+                        <VBox styleClass="form-group">
+                           <children>
+                              <Label text="Biography" />
+                              <TextArea fx:id="biography" prefHeight="180.0" promptText="Enter Biography" wrapText="true" />
+                           </children>
+                        </VBox>
+                        <HBox styleClass="form-group">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#clear" styleClass="color-600" text="Clear" />
+                              <Button mnemonicParsing="false" onAction="#upload" styleClass="color-800" text="Upload Photo" />
+                              <Button mnemonicParsing="false" onAction="#add" styleClass="color-800" text="Add Author" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox styleClass="right-view">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="Author List" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="card-title" />
+                        <String fx:value="color-300" />
+                        <String fx:value="right-view-width" />
+                     </styleClass>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <TextField fx:id="search" prefHeight="26.0" prefWidth="243.0" promptText="Search by Author Name" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="card-body" />
+                        <String fx:value="color-100" />
+                        <String fx:value="right-view-width" />
+                     </styleClass>
+                  </HBox>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="452.0" prefWidth="1000.0" styleClass="color-100">
+                     <content>
+                        <FlowPane fx:id="container">
+                           <styleClass>
+                              <String fx:value="card-body" />
+                              <String fx:value="color-100" />
+                              <String fx:value="right-view-width" />
+                           </styleClass></FlowPane>
+                     </content></ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="content-view" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.book.app.controllers.CustomerList">
+   <stylesheets>
+      <URL value="@colors.css" />
+      <URL value="@application.css" />
+   </stylesheets>
+   <children>
+      <HBox>
+         <children>
+            <Label text="Customer List" />
+         </children>
+         <styleClass>
+            <String fx:value="title-view" />
+            <String fx:value="color-500" />
+            <String fx:value="card-shadow" />
+         </styleClass>
+      </HBox>
+      <HBox styleClass="form-group">
+         <children>
+            <TextField fx:id="schName" prefHeight="26.0" prefWidth="211.0" promptText="Customer Name" />
+            <TextField fx:id="schPhone" prefHeight="26.0" prefWidth="214.0" promptText="Phone Number" />
+            <Button mnemonicParsing="false" onAction="#clear" styleClass="color-700" text="Clear" />
+         </children>
+      </HBox>
+      <TableView fx:id="table" prefHeight="519.0" prefWidth="1070.0" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="76.99996948242188" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="195.0" text="Name" />
+            <TableColumn fx:id="colEmail" prefWidth="182.0" text="Email" />
+            <TableColumn fx:id="colPhone" prefWidth="182.0" text="Phone" />
+            <TableColumn fx:id="colAddress" prefWidth="415.0" text="Address" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>

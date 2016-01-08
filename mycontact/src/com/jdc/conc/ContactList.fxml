@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.conc.ContactList">
+   <children>
+      <Text layoutX="32.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact List">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Text>
+      <TableView fx:id="table" layoutX="52.0" layoutY="91.0" prefHeight="274.0" prefWidth="513.0">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="157.0" text="Name" />
+          <TableColumn fx:id="colDob" prefWidth="143.0" text="Date of Birth" />
+            <TableColumn fx:id="colPhone" prefWidth="211.0" text="Phone Number" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

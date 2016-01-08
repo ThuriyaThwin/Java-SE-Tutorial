@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox styleClass="main-frame" stylesheets="@common.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.40" fx:controller="com.jdc.book.app.controllers.utils.AuthorList">
+   <children>
+      <HBox styleClass="head-view">
+         <children>
+            <Label text="Select Author" />
+         </children>
+      </HBox>
+      <TextField fx:id="searchBox" promptText="Filter by Name" />
+      <ListView fx:id="listView" prefHeight="292.0" prefWidth="380.0" />
+      <HBox styleClass="button-view">
+         <children>
+            <Button mnemonicParsing="false" onAction="#close" text="Close" />
+            <Button mnemonicParsing="false" onAction="#close" text="Select" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

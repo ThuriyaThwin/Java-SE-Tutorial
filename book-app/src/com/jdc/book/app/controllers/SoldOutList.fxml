@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="content-view" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.book.app.controllers.SoldOutList">
+   <stylesheets>
+      <URL value="@colors.css" />
+      <URL value="@application.css" />
+   </stylesheets>
+   <children>
+      <HBox>
+         <children>
+            <Label text="Sold Out List" />
+         </children>
+         <styleClass>
+            <String fx:value="title-view" />
+            <String fx:value="color-500" />
+            <String fx:value="card-shadow" />
+         </styleClass>
+      </HBox>
+      <HBox styleClass="form-group">
+         <children>
+            <DatePicker fx:id="schDateFrom" promptText="Date From" />
+            <DatePicker fx:id="schDateTo" promptText="Date To" />
+            <TextField fx:id="schCustomer" prefHeight="26.0" prefWidth="216.0" promptText="Customer" />
+            <TextField fx:id="schBook" prefHeight="26.0" prefWidth="229.0" promptText="Book" />
+            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="91.0" styleClass="color-600" text="Clear" />
+         </children>
+      </HBox>
+      <TableView fx:id="table" prefHeight="476.0" prefWidth="1008.0" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="colBook" prefWidth="193.99996948242188" text="Sell Date Time" />
+          <TableColumn fx:id="colCustomer" prefWidth="193.0" text="Customer" />
+            <TableColumn fx:id="colDateTime" prefWidth="220.0" text="Book" />
+            <TableColumn fx:id="colPrice" prefWidth="155.0" text="Price" />
+            <TableColumn fx:id="colCount" prefWidth="123.0" text="Count" />
+            <TableColumn fx:id="colTotal" prefWidth="164.0" text="Total" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="1070.0">
+         <children>
+            <Label text="Total" />
+            <Label fx:id="total" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="175.0" text="0.0" />
+         </children>
+         <styleClass>
+            <String fx:value="form-group" />
+            <String fx:value="fs-16" />
+         </styleClass>
+      </HBox>
+   </children>
+</VBox>

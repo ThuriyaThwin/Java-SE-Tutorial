@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="content-view" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.book.app.controllers.CheckOut">
+   <stylesheets>
+      <URL value="@colors.css" />
+      <URL value="@application.css" />
+   </stylesheets>
+   <children>
+      <HBox>
+         <children>
+            <Label text="Check Out" />
+         </children>
+         <styleClass>
+            <String fx:value="title-view" />
+            <String fx:value="color-500" />
+            <String fx:value="card-shadow" />
+         </styleClass>
+      </HBox>
+      <HBox prefHeight="555.0" prefWidth="1070.0" styleClass="content-view">
+         <children>
+            <VBox prefWidth="100.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="In the Cart" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="card-title" />
+                        <String fx:value="color-100" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="437.0" prefWidth="640.0">
+                     <children>
+                        <TableView fx:id="table" prefHeight="277.0" prefWidth="623.0" tableMenuButtonVisible="true">
+                          <columns>
+                            <TableColumn fx:id="colBook" prefWidth="149.0" text="Book" />
+                            <TableColumn fx:id="colAuthor" prefWidth="161.0" text="Author" />
+                              <TableColumn fx:id="colPrice" prefWidth="128.0" text="Price" />
+                              <TableColumn fx:id="colCount" prefWidth="65.0" text="Count" />
+                              <TableColumn fx:id="colTotal" prefWidth="102.0" text="Total" />
+                          </columns>
+                        </TableView>
+                     </children>
+                     <styleClass>
+                        <String fx:value="pad-10" />
+                        <String fx:value="color-050" />
+                     </styleClass>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label minWidth="100.0" text="Total" />
+                        <HBox alignment="CENTER_RIGHT" prefWidth="600.0">
+                           <children>
+                              <Label fx:id="total" text="0.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <styleClass>
+                        <String fx:value="card-title" />
+                        <String fx:value="color-100" />
+                     </styleClass>
+                  </HBox>
+               </children>
+               <styleClass>
+                  <String fx:value="wid-mid" />
+                  <String fx:value="card-shadow" />
+               </styleClass>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="Paid Information" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="card-title" />
+                        <String fx:value="color-600" />
+                     </styleClass>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="359.0" prefWidth="410.0" styleClass="pad-15-30">
+                     <children>
+                        <GridPane prefHeight="358.0" prefWidth="365.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="81.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="284.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Customer *" />
+                              <Label text="Phone" GridPane.rowIndex="1" />
+                              <Label text="Mail" GridPane.rowIndex="2" />
+                              <Label text="Address" GridPane.rowIndex="3" />
+                              <HBox alignment="CENTER_LEFT" styleClass="form-group" GridPane.columnIndex="1">
+                                 <children>
+                                    <TextField fx:id="name" prefHeight="26.0" prefWidth="240.0" />
+                                    <Button minWidth="60.0" mnemonicParsing="false" onAction="#callCustomers" prefWidth="60.0" styleClass="color-200" text="Search" />
+                                 </children>
+                              </HBox>
+                              <TextField fx:id="phone" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="mail" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextArea fx:id="address" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.rowSpan="2" />
+                              <HBox alignment="CENTER_LEFT" styleClass="form-group" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#clear" styleClass="big-btn" text="Clear" />
+                                    <Button layoutX="115.0" layoutY="15.0" mnemonicParsing="false" onAction="#save" styleClass="big-btn" text="Sell" />
+                                 </children>
+                              </HBox>
+                              <Label text="Paid Price" GridPane.rowIndex="5" />
+                              <TextField fx:id="paid" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+               </children>
+               <styleClass>
+                  <String fx:value="wid-small" />
+                  <String fx:value="color-100" />
+                  <String fx:value="card-shadow" />
+               </styleClass>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

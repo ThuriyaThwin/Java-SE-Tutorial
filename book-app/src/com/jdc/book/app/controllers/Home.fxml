@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="content-view" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.book.app.controllers.Home">
+   <stylesheets>
+      <URL value="@colors.css" />
+      <URL value="@application.css" />
+   </stylesheets>
+   <children>
+      <HBox>
+         <children>
+            <Label text="Book Shop Home" />
+         </children>
+         <styleClass>
+            <String fx:value="title-view" />
+            <String fx:value="color-500" />
+            <String fx:value="card-shadow" />
+         </styleClass>
+      </HBox>
+      <HBox prefHeight="555.0" prefWidth="1070.0" styleClass="form-group">
+         <children>
+            <VBox prefHeight="555.0" prefWidth="535.0">
+               <children>
+                  <PieChart fx:id="pieCategory" prefHeight="561.0" prefWidth="533.0" title="Category" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="555.0" prefWidth="535.0">
+               <children>
+                  <PieChart fx:id="pieAuthor" prefHeight="556.0" prefWidth="533.0" title="Author" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.conc.MainFrame">
+   <children>
+      <Text layoutX="144.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MY CONTACT">
+         <font>
+            <Font size="47.0" />
+         </font>
+      </Text>
+      <Button layoutX="78.0" layoutY="187.0" mnemonicParsing="false" onAction="#addContact" prefHeight="103.0" prefWidth="203.0" text="ADD CONTACT">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="316.0" layoutY="187.0" mnemonicParsing="false" onAction="#contactList" prefHeight="103.0" prefWidth="203.0" text="CONTACT LIST">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <RadioButton fx:id="memory" layoutX="232.0" layoutY="334.0" mnemonicParsing="false" selected="true" text="Memory">
+         <toggleGroup>
+            <ToggleGroup fx:id="modelType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="324.0" layoutY="334.0" mnemonicParsing="false" text="File" toggleGroup="$modelType" />
+   </children>
+</AnchorPane>

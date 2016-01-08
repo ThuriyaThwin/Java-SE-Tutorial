@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane styleClass="main-frame" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.book.app.controllers.MainFrame">
+   <top>
+      <MenuBar fx:id="menuBar" styleClass="color-300" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Home" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Books">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Add Book" />
+                  <MenuItem mnemonicParsing="false" text="Book List" />
+                  <MenuItem mnemonicParsing="false" text="Sold Out List" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Customers">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Customer List" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Master Data">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Categories" />
+                  <MenuItem mnemonicParsing="false" text="Authors" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <StackPane fx:id="contentView" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <styleClass>
+            <String fx:value="content-view" />
+            <String fx:value="color-050" />
+         </styleClass>
+      </StackPane>
+   </center>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="message" />
+         </children>
+         <styleClass>
+            <String fx:value="message-view" />
+            <String fx:value="color-100" />
+         </styleClass>
+      </HBox>
+   </bottom>
+   <stylesheets>
+      <URL value="@application.css" />
+      <URL value="@colors.css" />
+   </stylesheets>
+</BorderPane>

@@ -1,0 +1,29 @@
+.main-frame {
+	-fx-pref-width: 400px;
+	-fx-pref-height: 480px;
+	-fx-padding: 10;
+	-fx-spacing: 20;
+}
+
+.head-view {
+	-fx-padding: 15;
+	-fx-alignment: center;
+	-fx-background-color: #00796b;
+}
+
+.head-view Label {
+	-fx-text-fill: #e0f2f1;
+	-fx-font-size: 18px;
+}
+
+.button-view {
+	-fx-padding: 10;
+	-fx-spacing: 10;
+	-fx-alignment: center-left;
+	-fx-background-color: #80cbc4;
+}
+
+.button-view Button {
+	-fx-background-color: #00796b;
+	-fx-text-fill: #e0f2f1;
+}

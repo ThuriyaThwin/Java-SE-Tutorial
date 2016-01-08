@@ -1,0 +1,126 @@
+.main-frame {
+	-fx-pref-width: 1080px;
+	-fx-pref-height: 720px;	
+}
+
+.content-view {
+	-fx-pref-width: 1080px;
+	-fx-pref-height: 631px;	
+	-fx-padding: 5;
+	-fx-spacing: 10;
+}
+
+.message-view {
+	-fx-pref-width: 1080px;
+	-fx-pref-height: 60px;
+	-fx-alignment: center-left;
+	-fx-padding: 0 30 0 30;
+}
+
+.title-view {
+	-fx-padding: 15;
+	-fx-font-size: 20px;
+}
+
+.card-shadow {
+	/* dropshadow( <blur-type> , <color> , <radius> , <spread> , <x> , <y> ) */
+	-fx-effect: dropshadow(two-pass-box, #4db6ac, 0.7, 3, 3, 3); 
+}
+
+.card-title {
+	-fx-padding: 15;
+}
+
+.card-title Label {
+	-fx-font-size: 20;
+}
+
+.card-body {
+	-fx-padding: 15;
+	-fx-spacing: 15;
+	-fx-vgap: 10;
+	-fx-hgap: 10;
+}
+
+.card {
+	-fx-spacing: 10;
+}
+
+.left-view {
+	-fx-pref-width: 320px;
+	-fx-min-width: 320px;
+	-fx-pref-height: 554px;
+}
+
+.right-view {
+	-fx-max-width: 1080px;
+	-fx-pref-width: 760px;
+	-fx-pref-height: 554px;
+}
+
+.right-view-width {
+	-fx-pref-width: 760px;
+	-fx-max-width: 1080px;
+}
+
+.form-group {
+	-fx-spacing: 5;
+}
+
+.category-item {
+	-fx-alignment: center-left;
+	-fx-spacing: 10;
+	-fx-padding: 10;
+	-fx-pref-width: 300px;
+}
+
+.wid-mid {
+	-fx-pref-width: 640;
+}
+
+.wid-small {
+	-fx-pref-width: 410;
+}
+
+.controls-view Button {
+	-fx-pref-width: 90;
+	-fx-pref-height: 40;
+	-fx-background-color: #b2dfdb;
+	-fx-text-fill: #004d40;	
+}
+
+.cart-item {
+	-fx-pref-width: 380;
+	-fx-padding: 10;
+	-fx-spacing: 5;
+	-fx-alignment: center-left;
+	-fx-background-color: #b2dfdb;
+}
+
+.cart-item-name {
+	-fx-pref-width: 180;
+}
+
+.cart-item-price {
+	-fx-pref-width: 100;
+	-fx-alignment: center-right;
+}
+
+.fs-16 Label{
+	-fx-font-size: 16;
+}
+
+.pad-10 {
+	-fx-padding: 10;
+}
+
+.pad-15-30 {
+	-fx-padding: 0.0 30 0.0 15;
+}
+
+.big-btn {
+	-fx-pref-width: 100;
+	-fx-pref-height: 40;
+	-fx-background-color: #00796b;
+	-fx-text-fill: #e0f2f1;
+}

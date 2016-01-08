@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="content-view" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.book.app.controllers.Categories">
+   <stylesheets>
+      <URL value="@colors.css" />
+      <URL value="@application.css" />
+   </stylesheets>
+   <children>
+      <HBox>
+         <children>
+            <Label text="Categories" />
+         </children>
+         <styleClass>
+            <String fx:value="title-view" />
+            <String fx:value="color-700" />
+            <String fx:value="card-shadow" />
+         </styleClass>
+      </HBox>
+      <VBox styleClass="color-100">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Add New Category" />
+               </children>
+               <styleClass>
+                  <String fx:value="color-300" />
+                  <String fx:value="card-title" />
+               </styleClass>
+            </HBox>
+            <HBox styleClass="card-body">
+               <children>
+                  <TextField fx:id="name" prefHeight="26.0" prefWidth="241.0" promptText="Enter Category Name" />
+                  <Button mnemonicParsing="false" onAction="#addCategory" styleClass="color-300" text="Add New" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="15.0" layoutY="80.0" styleClass="color-100">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Category List" />
+               </children>
+               <styleClass>
+                  <String fx:value="color-300" />
+                  <String fx:value="card-title" />
+               </styleClass>
+            </HBox>
+            <FlowPane fx:id="container" styleClass="card-body" />
+         </children>
+      </VBox>
+   </children>
+</VBox>
